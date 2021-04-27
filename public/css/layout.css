@@ -109,11 +109,27 @@ footer{
     display: flex;
     text-align: center;
     align-items: center;
+    height: 100px;
 
 }
 footer h3{
-    width: 100%;
     color: white;
     font-weight: bold;
-    height: 100px;
+    width: 100%;
+}
+
+.homeForm{
+
+    margin-left: 30%;
+
+}
+
+.homeForm button{
+    margin-left: 171px;;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+    
 }

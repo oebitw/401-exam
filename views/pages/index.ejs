@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Home Page</title>
-    <%- include('../layouts/head') %> 
+    <%- include('../layouts/head') %>
 
 
 </head>
+
 <body>
     <header>
-        <%- include('../layouts/header') %> 
+        <%- include('../layouts/header') %>
 
     </header>
 
     <main>
 
-        <form action="/search" method="get">
+
+        <form action="/search" method="get" class="homeForm">
             <input type="text" name="" placeholder="Enter The Brand"> <br>
             <input type="text" name="from" placeholder="Min Price"> <br>
             <input type="text" name="to" placeholder="Max Price"> <br>
             <button type="submit">SEARCH</button>
         </form>
 
+
+
+
     </main>
 
     <footer>
 
-        <%- include('../layouts/footer') %> 
+        <%- include('../layouts/footer') %>
 
 
     </footer>
-    
+
 </body>
+
 </html>

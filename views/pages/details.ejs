@@ -30,7 +30,9 @@
                 <%=data.description%>
             </p>
 
-            <form action="/details/<%= data.id%>?_method=PUT" method="post">
+            <button id="update"> Edit Data</button>
+
+            <form id="hideForm" action="/details/<%= data.id%>?_method=PUT" method="post">
 
                 <label for="image"> Image Link</label> <br>               
                 <input name="image" value="<%=data.image%>"> <br>
@@ -61,5 +63,7 @@
 
     </footer>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/app.js"></script>
 </body>
 </html>
