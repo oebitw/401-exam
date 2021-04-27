@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Cart</title>
+    <%- include('../layouts/head') %> 
+
+</head>
+<body>
+
+    <header>
+
+        <%- include('../layouts/header') %> 
+
+
+    </header>
+
+
+    <main>
+        <% if (count===0) { %>
+            <h2>
+                Cart is Empty
+            </h2>
+
+        <%} %> 
+
+        <div class="wrap">
+            <% data.forEach(e=>{%>
+                <div class="card">
+                    <img src="<%=e.image%>" alt="">
+
+                    <h3>
+                        <%= e.name%>
+                    </h3>
+    
+                    <h4>
+                        Price:<%= e.price%>
+                    </h4>
+
+                    <button> <a href="/details/<%= e.id %>">View Details</a></button>
+    
+                </div>
+
+            <%}) %> 
+        </div>
+
+    </main>
+
+    <footer>
+
+        <%- include('../layouts/footer') %> 
+
+
+    </footer>
+    
+</body>
+</html>

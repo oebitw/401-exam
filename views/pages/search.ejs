@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search result</title>
+    <%- include('../layouts/header') %> 
+
+</head>
+<body>
+
+    <header>
+
+        <%- include('../layouts/header') %> 
+
+    </header> 
+
+    <main>
+        <div class="wrap">
+            <% data.forEach(e=>{ %>
+            <div class="card">
+
+                <img src="<%=e.image%>" alt="">
+
+                <h3>
+                    <%= e.name%>
+                </h3>
+
+                <h4>
+                    Price:<%= e.price%>
+                </h4>
+
+                <p>
+                    <%=e.description%>
+                </p>
+                
+            </div>
+
+            <%}) %> 
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('../layouts/footer') %> 
+
+
+    </footer>
+    
+</body>
+</html>

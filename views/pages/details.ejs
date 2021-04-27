@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+    <%- include('../layouts/head') %> 
+
+</head>
+<body>
+
+    <header>
+
+        <%- include('../layouts/header') %> 
+
+    </header>
+
+    <main>
+
+        <div class="card">
+            <img src="<%=data.image%>" alt="">
+
+            <h3>
+                <%= data.name%>
+            </h3>
+
+            <h4>
+                Price:<%= data.price%>
+            </h4>
+
+            <p>
+                <%=data.description%>
+            </p>
+
+            <form action="/details/<%= data.id%>?_method=PUT" method="post">
+
+                <label for="image"> Image Link</label> <br>               
+                <input name="image" value="<%=data.image%>"> <br>
+
+                <label for="name"> Product Name</label> <br>
+                <input name="name" value="<%= data.name%>"> <br>
+
+                <label for="price"> Product Price</label> <br>
+                <input name="price" value="<%= data.price%>"> <br>
+
+                <label for="description"> Description</label> <br>
+                <input name="description" value="<%=data.description%>"> <br>
+
+                <button type="submit">Update</button>
+            </form>
+
+            <form action="/details/<%= data.id%>?_method=DELETE" method="post">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <%- include('../layouts/footer') %> 
+
+
+    </footer>
+    
+</body>
+</html>
